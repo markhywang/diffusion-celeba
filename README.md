@@ -19,3 +19,7 @@ During backward diffusion, the U-Net predicts the amount of noise added at each 
 The loss function for backward diffusion is as follows:
 <br><br>
 ![alt text](https://github.com/markhywang/diffusion-celeba/blob/main/assets/loss-eqn.png)
+<br><br>
+In this repository, a simple Diffusion Model is trained on the CelebA dataset, which can be found here:
+<br>
+https://mmlab.ie.cuhk.edu.hk/projects/CelebA.html
