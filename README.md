@@ -12,6 +12,10 @@ Note that this equation can be further optimized during pre-computation by takin
 <br><br>
 When de-noising the image, a U-Net is used for image segmentation to predict the noise added in each timestep, which is then subtracting from the image at thet timestep to get a less noisy image.
 <br><br>
-The loss function for backward diffusion is as follows:
+During backward diffusion, the U-Net predicts the amount of noise added at each timestep t, which is then used to calculate the mean of the corresponding Gaussian Distribution. Afterwards, we can derive the equation for a de-noised version of an image at timestep t as follows:
 <br><br>
 ![alt text](https://github.com/markhywang/diffusion-celeba/blob/main/assets/backward-eqn.png)
+<br><br>
+The loss function for backward diffusion is as follows:
+<br><br>
+![alt text](https://github.com/markhywang/diffusion-celeba/blob/main/assets/loss-eqn.png)
